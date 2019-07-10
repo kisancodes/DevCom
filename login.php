@@ -34,10 +34,10 @@
     <h3 class="pb-4">Welcome to the &lt;/Dev&gt; community - DevCom</h3>
     <div class="row">
         <div class="col-md-6">
-            <h5>Ask what you don't know!</h5>
+            <h5>Share you Dev Knowledge and Experiences</h5>
             <img src="img/login.png" alt="developers_world">
         </div>
-        <div class="com-md6">
+        <div class="com-md-6">
     <form>
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>

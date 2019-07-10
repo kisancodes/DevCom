@@ -10,7 +10,7 @@
 </head>
 <body>
     
-    <nav class="navbar navbar-expand-lg navbar-light bg-success">
+<nav class="navbar navbar-expand-lg navbar-light bg-success">
 <div class="container">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -56,8 +56,10 @@
     <input type="checkbox" class="form-check-input" id="exampleCheck1" name="check_term" value="checked">
     <label class="form-check-label" for="exampleCheck1">Accept terms and conditions</label>
   </div>
-  <button type="submit" class="btn btn-success">Register</button>
+  <button type="submit" class="btn btn-success" name="submit">Register</button>
 </form>
+
+
 <p class="text-center">&copy; DevCom 2019</p>
 </div>
 
