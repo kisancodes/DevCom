@@ -39,16 +39,18 @@
     <div class="container body_section">
         <div class="row">
             <div class="col-md-2 profile_section">
-                <h6>Your Profile</h6>
+                <h6 class="mb-3">Your Profile</h6>
                  <div class="media">
                 <img src = "img/kisan.png" alt="profile_picture" class="profile_picture" style="width:32px;height:32px;">
                 <div class="media-body">
-                <p class="mt-1 ml-2" style="font-size:14px;">Kisan Tamang</p>
+                <p class="mt-0 ml-2" style="font-size:14px;">Kisan Tamang
+                <small id="emailHelp" class="form-text text-muted">Web Developer</small></p>
                 </div>
                 </div>
+                
 
             </div>
-            <div class="col-md-8">
+            <div class="col-md-8 post_wrapper">
             <!-- post -->
                 <div class="post">
                 <div class="media">
