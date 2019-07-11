@@ -7,7 +7,7 @@
     $dbName = "DevCom_db";
 
 //creating database connection
-$conn = mysqli_connect($server,$dbUserName,$dbPassword,$dbName);
+    $conn = mysqli_connect($server,$dbUserName,$dbPassword,$dbName);
     //taking registered values from register form
     $username = $_POST['full_name'];
     $useremail = $_POST['user_email'];
@@ -20,9 +20,6 @@ $conn = mysqli_connect($server,$dbUserName,$dbPassword,$dbName);
     if(mysqli_query($conn,$sql)){
         echo "<h3>Welcome to DevCom</h3>";
     }
-
-
-
 
     //send news letther
 if($_POST['check_term'] == "checked")  {

@@ -28,47 +28,52 @@
         <a class="nav-link" href="#">Profile</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-    <button class="btn btn-outline-light my-2 my-sm-0 mr-5" name="write" style="height:35px;margin-left:20px;" id=><i class="fa fa-paper-plane"></i> Write Post</button>
 
+    <!-- post--============ -->
+    <form class="form-inline my-2 my-lg-0">
+    <button  type="button" class="btn btn-outline-light my-2 my-sm-0 mr-5" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" name="write" style="height:35px;margin-left:20px;" id=><i class="fa fa-paper-plane"></i> Write Post</button>
+
+<!-- ''''''search''''''''''' -->
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
     </form>
-  
   </div>
   </div>
 </nav>
 <!-- nav ends here -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button>
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- //modal -->
+
+<div style="position:absolute;" class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Ask question</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <form>
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Recipient:</label>
-            <input type="text" class="form-control" id="recipient-name">
-          </div>
+
+
+
+        <form action="includes/post_engine.php" method="post">
           <div class="form-group">
             <label for="message-text" class="col-form-label">Message:</label>
-            <textarea class="form-control" id="message-text"></textarea>
+            <textarea class="form-control" id="message-text" name="question"></textarea>
           </div>
+          <div class="custom-file"> 
+              <input type="file" class="custom-file-input" id="customFile">
+              <label class="custom-file-label" for="customFile">Choose file</label>
+            </div>
+             <input type="submit" class="btn btn-success" value="Post">
         </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
       </div>
     </div>
   </div>
 </div>
 
+
+      
     <div class="container body_section">
         <div class="row">
             <div class="col-md-2 profile_section">
