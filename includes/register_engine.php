@@ -21,7 +21,11 @@ $conn = mysqli_connect($server,$dbUserName,$dbPassword,$dbName);
         echo "<h3>Welcome to DevCom</h3>";
     }
 
-if($_POST['check_term'] === "checked")  {
+
+
+
+    //send news letther
+if($_POST['check_term'] == "checked")  {
     $to = $useremail;
     $subject = "<h1>Welcome to the world of Developers";
     $message = "Learn, grow and share!!";
