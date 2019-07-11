@@ -1,14 +1,16 @@
 <?php
 
-include 'includes/database_detail.php';
+require('database_detail.php');
 
 $question = $_POST['question'];
 
-$sql = "INSERT INTO post_table(pid,post,image) VALUES ($question,'image-file1')";
+$sql = "INSERT INTO post_table(pid,post,cover_image) VALUES ('$question','image-file1')";
+die($sql);
 
-if(mysqli_query($conn,$sql)){
-    echo "good";
+
+$stmt = $conn->query($sql);
+if($stmt){
+    header("location:../index.php");
 }else{
-    echo "error";
+    header("location:../index.php?error=couldntpost");
 }
-mysqli_close($conn);
