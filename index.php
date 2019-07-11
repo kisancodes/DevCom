@@ -41,6 +41,8 @@
   </div>
 </nav>
 <!-- nav ends here -->
+
+
 <!-- //modal -->
 
 <div style="position:absolute;" class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
@@ -54,11 +56,8 @@
       </div>
       <div class="modal-body">
 
-
-
         <form action="includes/post_engine.php" method="post">
           <div class="form-group">
-            <label for="message-text" class="col-form-label">Message:</label>
             <textarea class="form-control" id="message-text" name="question"></textarea>
           </div>
           <div class="custom-file"> 
@@ -72,8 +71,6 @@
   </div>
 </div>
 
-
-      
     <div class="container body_section">
         <div class="row">
             <div class="col-md-2 profile_section">
@@ -82,7 +79,7 @@
                 <img src = "img/kisan.png" alt="profile_picture" class="profile_picture" style="width:32px;height:32px;">
                 <div class="media-body">
                 <p class="mt-0 ml-2" style="font-size:14px;">Kisan Tamang
-                <small id="emailHelp" class="form-text text-muted">Web Developer</small></p>
+                <small id="emailHelp" class="form-text text-muted">Software Developer</small></p>
                 </div>
                 </div>
             </div>
@@ -98,17 +95,6 @@
                 </div>
                     <h5 class="mt-3">What is prototype in JavaScript and How important is this?</h5>
                 </div>
-
-                  <div class="post">
-                <div class="media">
-                <img src = "img/kisan.png" alt="profile_picture" class="profile_picture">
-                <div class="media-body">
-                <h6 class="mt-3 ml-2">Kisan Tamang</h6>
-                </div>
-                </div>
-                    <h5 class="mt-3">What is prototype in JavaScript and How important is this?</h5>
-                </div>
-
             </div>
 
             <div class="col-md-2">
