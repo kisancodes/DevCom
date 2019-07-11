@@ -1,11 +1,14 @@
 <?php
 $server = "localhost";
 $dbUserName = "root";
-$dbPassword =  "root";
+$dbPassword =  "password";
 $dbName = "DevCom_db";
 
 //creating database connection
 
-$conn = mysqli_connect($server,$dbUserName,$dbPassword,$dbName);
-
+$conn = new mysqli($server,$dbUserName,$dbPassword,$dbName);
 //checking the connection
+//
+if ($conn->connect_error){
+		die("Connection failed: " . $conn->connect_error);
+}
