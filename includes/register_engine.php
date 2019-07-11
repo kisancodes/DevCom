@@ -18,10 +18,15 @@ elseif($user_password != $confirm_pw){
 }
 else{
 		$hashPassword = password_hash($user_password,PASSWORD_DEFAULT);
-		$sql = "INSERT INTO users_info(u_email,password,checked,full_name) VALUES ('$useremail','$hashPassword','$check','$username')";
+        $sql = "INSERT INTO users_info(full_name,u_email,password,check_box) VALUES ('$username','$useremail','$hashPassword','$check')";
+
+  
 		$stmt = $conn->query($sql);
 		if($stmt){
 				header("location:../login.php");
+        }else{
+            header("location:../register.php?error=cannotinsert");
         }
+
 }
  
