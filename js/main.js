@@ -23,3 +23,8 @@ window.onclick = function (event) {
         modal.style.display = "none";
     }
 }
+
+//for modal support
+$('#myModal').on('shown.bs.modal', function () {
+    $('#myInput').trigger('focus')
+})

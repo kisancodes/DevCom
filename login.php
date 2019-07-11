@@ -48,12 +48,8 @@
     <label for="exampleInputPassword1">Password</label>
     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
   </div>
-  <div class="form-group form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Subscribe Newsletter</label>
-  </div>
   <button type="submit" class="btn btn-success">Submit</button><br>
-  <span>Not member yet? <a href="">Register here</a></span>
+  <span>Not member yet? <a href="register.php">Register here</a></span>
 </form>
         </div>
     </div>
