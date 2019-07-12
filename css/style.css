@@ -11,8 +11,8 @@ body {
 }
 
 .profile_section {
-    border: 1px solid rgb(221, 220, 220);
     padding: 10px;
+    border:none;
 }
 
 .write_post {
@@ -32,7 +32,7 @@ body {
 }
 
 .body_section {
-    margin-top: 40px;
+    margin-top: 70px;
 }
 
 .post_wrapper {

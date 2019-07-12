@@ -4,8 +4,7 @@ require('database_detail.php');
 
 $question = $_POST['question'];
 
-$sql = "INSERT INTO post_table(pid,post,cover_image) VALUES ('$question','image-file1')";
-die($sql);
+$sql = "INSERT INTO post_table(post,cover_image) VALUES ('$question','image-file1')";
 
 
 $stmt = $conn->query($sql);

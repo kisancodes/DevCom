@@ -13,7 +13,7 @@
 </head>
 <body>
     
-<nav class="navbar navbar-expand-lg navbar-light bg-success">
+<nav class="navbar navbar-expand-lg navbar-light bg-success fixed-top mb-5">
 <div class="container">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -71,20 +71,41 @@
   </div>
 </div>
 
-    <div class="container body_section">
+    <div class="container body_section mt-5" style="margin-top:40px;">
         <div class="row">
             <div class="col-md-2 profile_section">
-                <h6 class="mb-3">Your Profile</h6>
+              <div class="profile" style=" border: 1px solid rgb(238, 235, 235);padding:10px;margin-top:28px;">
+              
                  <div class="media">
                 <img src = "img/kisan.png" alt="profile_picture" class="profile_picture" style="width:32px;height:32px;">
                 <div class="media-body">
                 <p class="mt-0 ml-2" style="font-size:14px;">Kisan Tamang
-                <small id="emailHelp" class="form-text text-muted">Software Developer</small></p>
+                <small id="emailHelp" class="form-text text-muted">Developer</small></p>
                 </div>
+                </div>
+                <p><u>Your tags</u></p>
+                <p>#JavaScript</p>
+                <p>#PHP</p>
+                <p>#Python</p>
                 </div>
             </div>
+
+            
+             
             <div class="col-md-8 post_wrapper">
             <!-- post -->
+            
+            <?php 
+            require ('./includes/database_detail.php');
+            $sql = 'SELECT * FROM post_table';
+         
+            $stmt = $conn->query($sql);
+          
+            if($stmt->num_rows>0){
+
+
+             while($row = $stmt->fetch_assoc()){
+                echo '
                 <div class="post">
                 <div class="media">
                 <img src = "img/kisan.png" alt="profile_picture" class="profile_picture">
@@ -93,11 +114,21 @@
                <?php echo date("d M"); ?>
                 </div>
                 </div>
-                    <h5 class="mt-3">What is prototype in JavaScript and How important is this?</h5>
+                  <h5 class="mt-3">'.$row["post"].'</h5>
+                  
+                  <div class="mt-3" style="color:green;">
+                  <span><i class="fa fa-heart"></i></span>
+                  <span><i class="fa fa-comment"></i></span>
+                  <span><i class="fa fa-share-alt"></i></span>
+                  </div>
                 </div>
-            </div>
+            '; 
+              }
+            }
+         ?>
+         </div>
 
-            <div class="col-md-2">
+            <div class="col-md-2" style="margin-top:20px;">
                 <h4>tags</h4>
                <ul class="list-group list-group-flush">
                 <li class="list-group-item">#JavaScript</li>
