@@ -11,7 +11,7 @@ body {
 
 .profile_section {
     padding: 10px;
-    border:none;
+    border: none;
 }
 
 .write_post {
@@ -36,7 +36,6 @@ body {
 
 .post_wrapper {
     border: 1px solid rgb(238, 235, 235);
-    border-left: none;
 }
 
 .post {
@@ -52,10 +51,7 @@ body {
     height: 55px;
     border-radius: 50%;
     border: 2px solid rgb(206, 206, 206);
-
 }
 
-/* The Modal (background) */
-.modal-backdrop {
-    z-index: 0 !important;
-}
+
+/* profile style ---- */
