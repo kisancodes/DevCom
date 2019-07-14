@@ -1,8 +1,8 @@
 <?php
-// session_start();
-//   if(!$_SESSION['username']){
-//     header("location:login.php");
-//   }
+session_start();
+  if(!$_SESSION['username']){
+    header("location:login.php?login&next=index");
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,9 +31,17 @@
       <li class="nav-item">
         <a class="nav-link" href="#">Home</a>
       </li>
+      
       <li class="nav-item">
         <a class="nav-link" href="#">Profile</a>
       </li>
+      <?php 
+      if(isset($_SESSION['username'])){
+        echo '<li class="nav-item">
+        <a class="nav-link" href="./includes/logout.inc.php?logout">Logout</a>
+      </li>';
+      }
+      ?>
     </ul>
 
     <!-- post--============ -->
