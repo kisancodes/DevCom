@@ -1,36 +1,47 @@
 <?php
-require('database_detail.php');
+
 if(isset($_POST['login'])){
+	require('database_detail.php');
 		$username = $_POST['username'];
 		$password = $_POST['password'];
+		$userPwd  = password_hash($password,PASSWORD_DEFAULT);
+		$demo = '$2y$10$mE9W3TScDPGpWcJeeNLzce/H5/LbqoRLwQfGrvnoWex38jRZ8WWqW';
+		$demoid = 'anilrai@gmail.com';
+		//checking empty value
 		if(empty($username) || empty($password)){
-				header("location:../login.php?error=emptyFields&email=".$email);
+				header("location:../login.php?error=emptyFields");
+				exit();
 		}
 		else{
-				$sql = "SELECT * from users_info WHERE u_email='$username' OR full_name='$username'";
+				$sql = "SELECT * FROM users_info WHERE u_email= '$username'";
 				$stmt = $conn->query($sql);
-				if(!$stmt){
-						header("location:../login.php?error=queryError");
+				
+				if($stmt->num_rows == 1){
+						// header("location:../login.php?error=prepareError");
+						header("refresh = 1; location: ../index.php");
 						exit();
 				}
 				else{
-						if($stmt->num_rows>0){
-								$result = $stmt->fetch_assoc();
-								$pwdCheck = password_verify($password, $result['password']);
-								if(!$pwdCheck){
-										header("location:../login.php?error=wrongPassword");
-										exit();
-								}
-								else if($pwdCheck){
-										$_SESSION['username'] = $username;
-										$_SESSION['password'] = $result['password'];
-										header("location:../index.php");
-								}
-						}
+					echo "login failed";
+					echo $username;
+					echo $password;
+					echo $userPwd;
+					echo $sql;
 				}
 		}
 }
 else{
 		header("location:../login.php");
 }
+
+
+
+
+
+
+
+
+
+
+
 ?>

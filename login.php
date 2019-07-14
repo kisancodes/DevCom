@@ -6,11 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
     <nav class="navbar navbar-expand-lg navbar-light bg-success">
 <div class="container">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,14 +17,6 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
     <a class="navbar-brand" href="#" style="color:#fff;font-weight:bold;font-size:24px;">DevCom</a>
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0 pull-right">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Register</a>
-      </li>
-       <li class="nav-item">
-        <a class="nav-link" href="#">Explore</a>
-      </li>
-    </ul>
   </div>
   </div>
 </nav>
@@ -48,7 +39,7 @@
 				<label for="exampleInputPassword1">Password</label>
 				<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
 			</div>
-			<button type="submit" class="btn btn-success" name="login">Login</button><br>
+			<input type="submit" class="btn btn-success" name="login" value="Login"></button><br>
 			<span>Not member yet? <a href="register.php">Register here</a></span>
 </form>
         </div>
