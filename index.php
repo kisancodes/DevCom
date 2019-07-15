@@ -47,9 +47,7 @@ session_start();
                 <p>#Python</p>
                 </div>
             </div>
-
             
-             
             <div class="col-md-8 post_wrapper">
             <!-- post -->
             <?php 
@@ -91,7 +89,7 @@ session_start();
                   $statement = $conn->query($sql);
                   if($statement->num_rows>0){
                     while($row = $statement->fetch_assoc()){
-                      echo  '<li class="list-group-item">'.$row['tags']. '</li>';
+                      echo  '<li class="list-group-item">' .$row['tags']. '</li>';
                     }
                   }
                ?>

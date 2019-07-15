@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <!-- custom css -->
     <link rel="stylesheet" href="css/style.css">
+    <style>
+  
+    </style>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-success fixed-top mb-5">
@@ -26,12 +29,16 @@
       </li>
       
       <li class="nav-item">
-        <a class="nav-link" href="profile.php"><i class="fa fa-"></i>Profile</a>
+        <a class="nav-link" href="profile.php"><i class="fa fa-user"></i> Profile</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fa fa-cog"></i> Setting</a>
       </li>
       <?php 
       if(isset($_SESSION['username'])){
-        echo '<li class="nav-item">
-        <a class="nav-link" href="./includes/logout.inc.php?logout">Logout</a>
+        echo '
+        <li class="nav-item">
+        <a class="nav-link" href="./includes/logout.inc.php?logout"><i class="fa fa-sign-out"></i> Logout</a>
       </li>';
       }
       ?>
@@ -39,7 +46,7 @@
 
     <!-- post--============ -->
     <form class="form-inline my-2 my-lg-0" action="includes/search.php">
-    <button  type="button" class="btn btn-outline-light my-2 my-sm-0 mr-5" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" name="write" style="height:35px;margin-left:20px;" id=><i class="fa fa-paper-plane"></i> Write Post</button>
+    <button  type="button" class="btn btn-outline-light  my-sm-0 post_button" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" name="write" style="height:35px;margin-left:20px;" id=><i class="fa fa-paper-plane"></i> Write Post</button>
 
 <!-- ''''''search''''''''''' -->
       <input class="form-control mr-sm-2" type="search" placeholder="Search tags" aria-label="Search">
