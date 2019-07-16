@@ -11,7 +11,18 @@ session_start();
 <div class="container profile_body">
   <div class="row">
     <div class="col-md-3 dasboard-nav">
-    <img src="img/kisan.png" alt="profile-picture" class="profile_pic" >
+    <!-- <img src="img/kisan.png" alt="profile-picture" class="profile_pic" > -->
+    <?php 
+  require('includes/database_detail.php');
+  $username = $_SESSION['username'];
+  // echo $username;
+  $sql = "SELECT image_url from users_info where u_email = '$username'";
+  $stmt = $conn->query($sql);
+  if($stmt->num_rows>0){
+      $rows = $stmt->fetch_assoc();
+      echo '<img src="'.$rows["image_url"].'" alt="profile-picture" class="profile_pic" style="width:120px; height:120px">';
+  }
+  ?> 
     
     <button class="btn btn-secondary">Edit Profile</button>
     <p>
@@ -28,7 +39,7 @@ session_start();
     </p>
     </div>
   
-    <div class="col-md-6" st>
+    <div class="col-md-6">
         <h3>Statistics</h3>
         <h5>Your Activity</h5>
         <div class="statistics" style="padding:5px;">
@@ -81,9 +92,10 @@ session_start();
       <div class="col-md-3">
         <form action="includes/upload.inc.php" method="post" enctype="multipart/form-data">
             Select image to upload:
-            <input type="file" name="fileToUpload" id="fileToUpload">
+            <input type="file" name="image-name" id="fileToUpload">
             <input type="submit" value="Upload Image" name="submit" class="btn btn-success" name="submit">
         </form>
+
     </div>
   </div>
 </div>
@@ -92,3 +104,5 @@ session_start();
 
 
 <?php require ('includes/footer.php'); ?>  
+   
+</div>
