@@ -12,13 +12,14 @@ session_start();
   <div class="row">
     <div class="col-md-3 dasboard-nav">
     <img src="img/kisan.png" alt="profile-picture" class="profile_pic" >
+    
+    <button class="btn btn-secondary">Edit Profile</a>
     <p>
       <p class="social text-center">
         <i class="fa fa-facebook"></i>
         <i class = "fa fa-twitter"></i>
         <i class="fa fa-instagram"></i>
         <i class="fa fa-github"></i>
-
       </p>
     Name:Kisan Tamang<br>
     Email:kisantamang@gmail.com<br>
