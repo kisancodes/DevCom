@@ -11,7 +11,7 @@ session_start();
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Ask question</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Write your post here</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -20,7 +20,7 @@ session_start();
 
         <form action="includes/post_engine.php" method="post" enctype="multipart/form-data">
           <div class="form-group">
-            <textarea class="form-control" id="message-text" name="question" placeholder="What is your question?"></textarea>
+            <textarea class="form-control" id="message-text" name="question" placeholder="What is on your mind?"></textarea>
           </div>
          
              <input type="submit" class="btn btn-success" value="Post" name="submit">
@@ -72,9 +72,11 @@ session_start();
                   <span><i class="fa fa-heart" style="color:#000;font-size:18px;"></i> 100</span>
                   <span><i class="fa fa-comment" style="color:#000;font-size:18px;"></i> 200</span>
                   <span><i class="fa fa-share-alt" style="color:#000;font-size:18px;"></i> 134</span>
-                  </div>
-                  <a href="includes/delete.inc.php?id='. $row['pid'] .'" class="btn btn-danger">Delete</a>
                 
+                  <a href="includes/delete.inc.php?id='. $row['pid'] .'" class="btn btn-danger mr-auto">Delete</a>
+
+                 <button  type="button" class="btn btn-secondary  my-sm-0 " data-toggle="modal" data-target="#exampleModal1" data-whatever="@mdo" name="write" style="height:35px;margin-left:20px;" id=> Edit</button>
+                  </div>
                 </div>
                 
                 
@@ -107,4 +109,29 @@ session_start();
         </div>
     </div>
 
+    <!-- +++++++++++ Update modal ++++++++++   -->
+
+<div style="position:absolute;" class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Update your post?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="includes/post_engine.php" method="post" enctype="multipart/form-data">
+          <div class="form-group">
+            <textarea class="form-control" id="message-text" name="question" value=""></textarea>
+          </div>
+             <input type="submit" class="btn btn-success" value="Update" name="submit">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
 <?php require ('includes/footer.php'); ?>
+
+

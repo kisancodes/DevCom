@@ -76,3 +76,7 @@ body {
   margin: 20px;
   height: 20px;
 }
+
+.btn-danger{
+  width:40px;
+}
