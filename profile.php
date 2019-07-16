@@ -13,7 +13,7 @@ session_start();
     <div class="col-md-3 dasboard-nav">
     <img src="img/kisan.png" alt="profile-picture" class="profile_pic" >
     
-    <button class="btn btn-secondary">Edit Profile</a>
+    <button class="btn btn-secondary">Edit Profile</button>
     <p>
       <p class="social text-center">
         <i class="fa fa-facebook"></i>
@@ -77,10 +77,17 @@ session_start();
           </div>
         </div>
     </div>
+
       <div class="col-md-3">
+        <form action="includes/upload.inc.php" method="post" enctype="multipart/form-data">
+            Select image to upload:
+            <input type="file" name="fileToUpload" id="fileToUpload">
+            <input type="submit" value="Upload Image" name="submit" class="btn btn-success" name="submit">
+        </form>
     </div>
   </div>
 </div>
+
 
 
 
