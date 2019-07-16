@@ -32,7 +32,7 @@
         <a class="nav-link" href="profile.php"><i class="fa fa-user"></i> Profile</a>
       </li>
        <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fa fa-cog"></i> Setting</a>
+        <a class="nav-link" href="#"><i class="fa fa-cog"></i> Settings</a>
       </li>
       <?php 
       if(isset($_SESSION['username'])){

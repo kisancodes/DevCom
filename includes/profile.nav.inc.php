@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>DevCom, A developer community to share knowledge and  ask question</title>
     <!-- bootstrap css -->
@@ -26,12 +26,12 @@
       </li>
       
       <li class="nav-item">
-        <a class="nav-link" href="profile.php"><i class="fa fa-"></i>Profile</a>
+        <a class="nav-link" href="profile.php"><i class="fa fa-user"></i> Profile</a>
       </li>
       <?php 
       if(isset($_SESSION['username'])){
         echo '<li class="nav-item">
-        <a class="nav-link" href="./includes/logout.inc.php?logout">Logout</a>
+        <a class="nav-link" href="./includes/logout.inc.php?logout"><i class="fa fa-sign-out"></i>Logout</a>
       </li>';
       }
       ?>
