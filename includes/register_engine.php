@@ -40,4 +40,12 @@ else{
         }
 
 }
+//sending mail after subscribing news letter
+if($check == true){
+	$to = $useremail;
+	$subject = "<h1>Registration has been successfull</h1>";
+	$msg = "<p>Hi '.$username.',<br>You are now part of our community</p>";
+
+	mail($to,$subject,$msg);
+}
  

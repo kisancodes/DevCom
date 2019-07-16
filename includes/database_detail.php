@@ -1,7 +1,7 @@
 <?php
 $server = "localhost";
 $dbUserName = "root";
-$dbPassword =  "password";
+$dbPassword =  "root";
 $dbName = "DevCom_db";
 
 //creating database connection
