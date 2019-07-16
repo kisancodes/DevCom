@@ -73,7 +73,12 @@ session_start();
                   <span><i class="fa fa-comment" style="color:#000;font-size:18px;"></i> 200</span>
                   <span><i class="fa fa-share-alt" style="color:#000;font-size:18px;"></i> 134</span>
                   </div>
-                </div>';
+                  <a href="includes/delete.inc.php?id='. $row['pid'] .'" class="btn btn-danger">Delete</a>
+                
+                </div>
+                
+                
+                ';
             
               }
             }
