@@ -6,6 +6,8 @@ if(!$_SESSION['username']){
 ?>
 <!-- header file for index.php file -->
 <?php require ('includes/index.inc.nav.php'); ?>
+
+
 <!-- //modal -->
 <div style="position:absolute;" class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
 	<div class="modal-dialog" role="document">
@@ -22,7 +24,6 @@ if(!$_SESSION['username']){
 					<div class="form-group">
 						<textarea class="form-control" id="message-text" name="question" placeholder="What is on your mind?"></textarea>
 					</div>
-
 						 <input type="submit" class="btn btn-success" value="Post" name="submit">
 				</form>
 			</div>
@@ -33,30 +34,32 @@ if(!$_SESSION['username']){
 				<div class="row">
 						<div class="col-md-2 profile_section">
 							<div class="profile" style=" border: 1px solid rgb(238, 235, 235);padding:10px;margin-top:28px;">
-
-								 <div class="media">
+							<div class="media">
 								<img src = "img/kisan.png" alt="profile_picture" class="profile_picture" style="width:32px;height:32px;">
-								<div class="media-body">
-								<a class="mt-0 ml-2" style="font-size:14px; color:#000;" href="profile.php">Kisan Tamang
-								<small id="emailHelp" class="form-text text-muted ml-2">Developer</small></a>
+									<div class="media-body">
+										<a class="mt-0 ml-2" style="font-size:14px; color:#000;" href="profile.php">Kisan Tamang
+										<small id="emailHelp" class="form-text text-muted ml-2">Developer</small></a>
+									</div>
 								</div>
-								</div>
-								<p><u>Your tags</u></p>
-								<p>#JavaScript</p>
-								<p>#PHP</p>
-								<p>#Python</p>
-								</div>
+									<p><u>Your tags</u></p>
+									<p>#JavaScript</p>
+									<p>#PHP</p>
+									<p>#Python</p>
+							</div>
+						</div>
+						<div>
+						
 						</div>
 
 						<div class="col-md-8 post_wrapper">
 						<!-- post -->
-<?php 
-require ('./includes/database_detail.php');
-$sql = 'SELECT * FROM post_table';
-$stmt = $conn->query($sql);
-if($stmt->num_rows>0){
-		while($row = $stmt->fetch_assoc()){
-				echo '
+							<?php 
+							require ('./includes/database_detail.php');
+							$sql = 'SELECT * FROM post_table';
+							$stmt = $conn->query($sql);
+							if($stmt->num_rows>0){
+									while($row = $stmt->fetch_assoc()){
+							echo '
 								<div class="post">
 								<div class="media">
 								<img src = "img/kisan.png" alt="profile_picture" class="profile_picture">
@@ -82,8 +85,8 @@ if($stmt->num_rows>0){
 
 								';
 
-				echo '
-				<!-- +++++++++++ Update modal ++++++++++   -->
+						echo '
+								<!-- +++++++++++ Update modal ++++++++++   -->
 
 						<div style="position:absolute;" class="modal fade" id="exampleModal'.$row["pid"].'" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
 						<div class="modal-dialog" role="document">
@@ -110,20 +113,19 @@ if($stmt->num_rows>0){
 }
 ?>
 				 </div>
-
 						<div class="col-md-2" style="margin-top:20px;">
-								<h5>#Tags</h5>
-							 <ul class="list-group list-group-flush">
-<?php 
-require ('./includes/database_detail.php');
-$sql = "SELECT * FROM tags_table";
-$statement = $conn->query($sql);
-if($statement->num_rows>0){
-		while($row = $statement->fetch_assoc()){
-				echo  '<li class="list-group-item">' .$row['tags']. '</li>';
-		}
-}
-?>
+							<h5>#Tags</h5>
+						 <ul class="list-group list-group-flush">
+								<?php 
+								require ('./includes/database_detail.php');
+								$sql = "SELECT * FROM tags_table";
+								$statement = $conn->query($sql);
+								if($statement->num_rows>0){
+										while($row = $statement->fetch_assoc()){
+												echo  '<li class="list-group-item">' .$row['tags']. '</li>';
+										}
+								}
+								?>
 						</ul>
 						 <form action="includes/add_tag.php" method="post">
 						 <input type="text" class="form-control mr-sm-2" name="tags" placeholder="tag">

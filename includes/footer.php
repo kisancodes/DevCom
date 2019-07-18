@@ -1,6 +1,6 @@
 
     <p class="text-center mt-5">&copy; DevCom <?php echo date("Y")?></p>
-    <p class="text-center">Privacy . Policy </p>
+    <p class="text-center">Privacy . Policy . <span><a class="email.php" href="email.php">Feedback</a></span></p>
 
     <!-- bootstrap javascript -->
     <script src="bootstrap/js/jquery.min.js"></script>
