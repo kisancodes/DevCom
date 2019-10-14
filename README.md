@@ -1,3 +1,3 @@
 # DevCom
 Online developers' forum
-![screenshot](image/screenshot.png)
+![screenshot](img/screenshot.png)
